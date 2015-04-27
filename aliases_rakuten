@@ -1,0 +1,5 @@
+#Alias GEP_UI_MALL_MODE
+alias devmode='export gep_ui_mall_mode=development'
+alias qamode='export gep_ui_mall_mode=qa/local'
+alias qfemode='export gep_ui_mall_mode=qfe/local'
+alias server_puma='bundle exec rails s puma'
