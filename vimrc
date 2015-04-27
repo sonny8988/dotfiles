@@ -29,7 +29,7 @@ set hlsearch                                  " Highlight Search Results
 set hidden                                    " Allow unsaved buffers
 
 
-" Folding settings
+" Folding Settings
 set foldmethod=indent   " Fold based on indent
 set foldnestmax=10      " Deepest fold is 10 levels
 set nofoldenable        " Dont fold by default
@@ -37,3 +37,11 @@ set foldlevel=1         " This is just what i use
 
 " Key Mapping
 nmap <leader>bb :CtrlPBuffer<cr>
+" Buffer Switching
+map <C-Tab> :bnext<cr>
+map <C-S-Tab> :bprevious<cr>
+" Copy and Paste
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <ESC>"+pa
