@@ -12,6 +12,8 @@ fi
 
 # Customize to your needs...
 
+# Allow CTRL-S in terminal Vim
+stty -ixon
 #Aliases
 if [ -f ~/.dotfiles/aliases_rakuten ]; then
     . ~/.dotfiles/aliases_rakuten
