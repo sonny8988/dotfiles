@@ -1,0 +1,12 @@
+[user]
+	name = Indra Wicaksono
+	email = indra.wicaksono@rakuten.com
+[push]
+	default = matching
+[core]
+	editor = vim
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
