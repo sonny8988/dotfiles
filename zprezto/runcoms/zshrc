@@ -18,3 +18,10 @@ stty -ixon
 if [ -f ~/.dotfiles/aliases_rakuten ]; then
     . ~/.dotfiles/aliases_rakuten
 fi
+
+# Local ZSHRC
+if [ -f ~/.zshrc.local ]; then
+    . ~/.zshrc.local
+fi
+
+eval "$(rbenv init -)"

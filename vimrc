@@ -11,6 +11,7 @@ Plugin 'flazz/vim-colorschemes'       " Tons of colors
 Plugin 'kien/ctrlp.vim'               " Fuzzy Search
 Plugin 'leafgarland/typescript-vim'   " Vim for typescript
 Plugin 'fatih/vim-go'                 " Vim for golang  
+Plugin 'derekwyatt/vim-scala'         " Vim for Scala
 " Autocomplete code. You need to remember to install dependancies.
 Plugin 'Valloric/YouCompleteMe'       " Autocompletion  
 Plugin 'jiangmiao/auto-pairs'         " Closing Brackets
