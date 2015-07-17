@@ -15,9 +15,10 @@ Plugin 'fatih/vim-go'                 " Vim for golang
 Plugin 'derekwyatt/vim-scala'         " Vim for Scala
 " Autocomplete code. You need to remember to install dependancies.
 Plugin 'Valloric/YouCompleteMe'       " Autocompletion  
-Plugin 'docunext/closetag.vim'
+Plugin 'docunext/closetag.vim'        " Close HTML tags
 Plugin 'jiangmiao/auto-pairs'         " Closing Brackets
 Plugin 'rking/ag.vim'                 " Searching
+Plugin 'cakebaker/scss-syntax.vim'    " SCSS hightlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
