@@ -15,6 +15,7 @@ Plugin 'fatih/vim-go'                 " Vim for golang
 Plugin 'derekwyatt/vim-scala'         " Vim for Scala
 " Autocomplete code. You need to remember to install dependancies.
 Plugin 'Valloric/YouCompleteMe'       " Autocompletion  
+Plugin 'docunext/closetag.vim'
 Plugin 'jiangmiao/auto-pairs'         " Closing Brackets
 Plugin 'rking/ag.vim'                 " Searching
 
