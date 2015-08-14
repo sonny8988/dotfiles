@@ -19,6 +19,7 @@ Plugin 'docunext/closetag.vim'        " Close HTML tags
 Plugin 'jiangmiao/auto-pairs'         " Closing Brackets
 Plugin 'rking/ag.vim'                 " Searching
 Plugin 'cakebaker/scss-syntax.vim'    " SCSS hightlighting
+Plugin 'ntpeters/vim-better-whitespace' " Trailing whitspace
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -33,13 +34,16 @@ syntax on                                     " Syntax Highlighting
 set tabstop=2 shiftwidth=2 expandtab          " Space Indentation
 set number                                    " Line Numbering
 set hlsearch                                  " Highlight Search Results
-set guifont=Monospace\ 8
+" set guifont=Monospace\ 8
 
 " Folding Settings
 set foldmethod=indent   " Fold based on indent
 set foldnestmax=10      " Deepest fold is 10 levels
 set nofoldenable        " Dont fold by default
 set foldlevel=1         " This is just what i use
+
+" add jbuilder syntax highlighting
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 
 
 """"""""""""""""
