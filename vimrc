@@ -20,6 +20,7 @@ Plugin 'jiangmiao/auto-pairs'         " Closing Brackets
 Plugin 'rking/ag.vim'                 " Searching
 Plugin 'cakebaker/scss-syntax.vim'    " SCSS hightlighting
 Plugin 'ntpeters/vim-better-whitespace' " Trailing whitspace
+Plugin 'FelikZ/ctrlp-py-matcher'      " Faster CTRLP matching
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -38,7 +39,7 @@ set hlsearch                                  " Highlight Search Results
 
 " Folding Settings
 set foldmethod=indent   " Fold based on indent
-set foldnestmax=10      " Deepest fold is 10 levels
+" set foldnestmax=10      " Deepest fold is 10 levels
 set nofoldenable        " Dont fold by default
 set foldlevel=1         " This is just what i use
 
@@ -70,3 +71,12 @@ inoremap <C-S> <C-O>:update<CR>
 
 map <F2> :NERDTreeToggle<CR>              " Toggle NERDTREE
 map <F5> :ClearCtrlPCache<CR>             " Clear CtrlP Cache
+
+" Make CTRLP faster
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
+
+if executable("ag") " If ag is available use it as filename list generator instead of 'find'
+  set grepprg=ag\ --nogroup\ --nocolor
+  let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
+endif
