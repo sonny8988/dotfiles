@@ -35,7 +35,7 @@ syntax on                                     " Syntax Highlighting
 set tabstop=2 shiftwidth=2 expandtab          " Space Indentation
 set number                                    " Line Numbering
 set hlsearch                                  " Highlight Search Results
-" set guifont=Monospace\ 8
+set guifont=Monospace\ 8
 
 " Folding Settings
 set foldmethod=indent   " Fold based on indent
@@ -73,9 +73,9 @@ map <F2> :NERDTreeToggle<CR>              " Toggle NERDTREE
 map <F5> :ClearCtrlPCache<CR>             " Clear CtrlP Cache
 
 " Make CTRLP faster
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
-
+" The one uses the git to build the file list
+" let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+  let g:ctrlp_match_func = { 'match': 'pymatcher#PyMatch' }
 if executable("ag") " If ag is available use it as filename list generator instead of 'find'
   set grepprg=ag\ --nogroup\ --nocolor
   let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --ignore ''.git'' --ignore ''.DS_Store'' --ignore ''node_modules'' --hidden -g ""'
