@@ -21,6 +21,7 @@ Plugin 'rking/ag.vim'                 " Searching
 Plugin 'cakebaker/scss-syntax.vim'    " SCSS hightlighting
 Plugin 'ntpeters/vim-better-whitespace' " Trailing whitspace
 Plugin 'FelikZ/ctrlp-py-matcher'      " Faster CTRLP matching
+Plugin 'scrooloose/syntastic'         " External syntax checker
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -45,6 +46,12 @@ set foldlevel=1         " This is just what i use
 
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+
+" Syntastic aggregator checks for golang
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_go_checkers = ['go', 'golint', 'errcheck', 'govet']
+let g:go_fmt_command = "goimports"
+
 
 
 """"""""""""""""
