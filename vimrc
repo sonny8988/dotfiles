@@ -22,6 +22,7 @@ Plugin 'cakebaker/scss-syntax.vim'    " SCSS hightlighting
 Plugin 'ntpeters/vim-better-whitespace' " Trailing whitspace
 Plugin 'FelikZ/ctrlp-py-matcher'      " Faster CTRLP matching
 Plugin 'scrooloose/syntastic'         " External syntax checker
+Plugin 'rhysd/vim-crystal'            " VIM for Crystal Lang
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
