@@ -7,14 +7,14 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'            " Vundle package manager
 Plugin 'scrooloose/nerdtree'          " Nerd Tree
-Plugin 'flazz/vim-colorschemes'       " Tons of colors 
+Plugin 'flazz/vim-colorschemes'       " Tons of color
 Plugin 'kien/ctrlp.vim'               " Fuzzy Search
 Plugin 'leafgarland/typescript-vim'   " Vim for typescript
 Plugin 'kchmck/vim-coffee-script'     " CoffeeScript
-Plugin 'fatih/vim-go'                 " Vim for golang  
+Plugin 'fatih/vim-go'                 " Vim for golang
 Plugin 'derekwyatt/vim-scala'         " Vim for Scala
 " Autocomplete code. You need to remember to install dependancies.
-Plugin 'Valloric/YouCompleteMe'       " Autocompletion  
+Plugin 'Valloric/YouCompleteMe'       " Autocompletion
 Plugin 'docunext/closetag.vim'        " Close HTML tags
 Plugin 'jiangmiao/auto-pairs'         " Closing Brackets
 Plugin 'rking/ag.vim'                 " Searching
@@ -52,6 +52,8 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck', 'govet']
 let g:go_fmt_command = "goimports"
 
+" Syntastic for Ruby
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
 
 
 """"""""""""""""
@@ -70,6 +72,9 @@ vmap <C-c> "+yi
 vmap <C-x> "+c
 vmap <C-v> c<ESC>"+p
 imap <C-v> <ESC>"+pa
+
+" Wierd backspace behavior on OSX
+set backspace=indent,eol,start
 
 " Use CTRL-S for saving, also in Insert mode
 noremap <C-S> :update<CR>
