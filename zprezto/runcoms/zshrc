@@ -38,9 +38,15 @@ export PATH
 # SCM breeze
 [ -s "/home/sonny8988/.scm_breeze/scm_breeze.sh" ] && source "/home/sonny8988/.scm_breeze/scm_breeze.sh"
 
+# NVM
 export NVM_DIR="/home/sonny8988/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NODE_PATH=/home/sonny8988/.nvm/v0.10.29/lib/node_modules:/home/sonny8988/.nvm/versions/node/v0.12.7/lib/node_modules
+
+# NDENV
+eval "$(ndenv init -)"
+
+# GOlang
 export GO15VENDOREXPERIMENT=1
 
 # SCM breeze
