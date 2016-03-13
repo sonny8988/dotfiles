@@ -35,11 +35,8 @@ PATH=$PATH:~/bin:$GOPATH/bin
 export PATH
 [[ -s "/home/sonny8988/.gvm/scripts/gvm" ]] && source "/home/sonny8988/.gvm/scripts/gvm"
 
-# SCM breeze
-[ -s "/home/sonny8988/.scm_breeze/scm_breeze.sh" ] && source "/home/sonny8988/.scm_breeze/scm_breeze.sh"
-
-# NVM
-export NVM_DIR="/home/sonny8988/.nvm"
+#NVM
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NODE_PATH=/home/sonny8988/.nvm/v0.10.29/lib/node_modules:/home/sonny8988/.nvm/versions/node/v0.12.7/lib/node_modules
 
@@ -50,4 +47,4 @@ eval "$(ndenv init -)"
 export GO15VENDOREXPERIMENT=1
 
 # SCM breeze
-[ -s "/Users/indrawicaksono/.scm_breeze/scm_breeze.sh" ] && source "/Users/indrawicaksono/.scm_breeze/scm_breeze.sh"
+[ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"

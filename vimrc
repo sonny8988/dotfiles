@@ -22,6 +22,7 @@ Plugin 'cakebaker/scss-syntax.vim'    " SCSS hightlighting
 Plugin 'ntpeters/vim-better-whitespace' " Trailing whitspace
 Plugin 'FelikZ/ctrlp-py-matcher'      " Faster CTRLP matching
 Plugin 'scrooloose/syntastic'         " External syntax checker
+Plugin 'slim-template/vim-slim.git'   " Slim
 Plugin 'rhysd/vim-crystal'            " VIM for Crystal Lang
 Plugin 'slim-template/vim-slim.git'   " SLIM templating
 
@@ -48,6 +49,9 @@ set foldlevel=1         " This is just what i use
 
 " add jbuilder syntax highlighting
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+" slim syntax highlighting on ngslim
+autocmd BufNewFile,BufRead *.ngslim set syntax=slim
+
 
 " Syntastic aggregator checks for golang
 let g:syntastic_aggregate_errors = 1
@@ -86,6 +90,7 @@ inoremap <C-S> <C-O>:update<CR>
 map <F2> :NERDTreeToggle<CR>              " Toggle NERDTREE
 map <F5> :ClearCtrlPCache<CR>             " Clear CtrlP Cache
 
+let g:ycm_filetype_whitelist = { 'cpp': 1, 'c': 1, 'python':1  }
 " Make CTRLP faster
 " The one uses the git to build the file list
 " let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
