@@ -24,7 +24,6 @@ Plugin 'FelikZ/ctrlp-py-matcher'      " Faster CTRLP matching
 Plugin 'scrooloose/syntastic'         " External syntax checker
 Plugin 'slim-template/vim-slim.git'   " Slim
 Plugin 'rhysd/vim-crystal'            " VIM for Crystal Lang
-Plugin 'slim-template/vim-slim.git'   " SLIM templating
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
