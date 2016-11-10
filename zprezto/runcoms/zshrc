@@ -40,11 +40,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 export NODE_PATH=/home/sonny8988/.nvm/v0.10.29/lib/node_modules:/home/sonny8988/.nvm/versions/node/v0.12.7/lib/node_modules
 
-# NDENV
-eval "$(ndenv init -)"
-
-# GOlang
+# Golang
 export GO15VENDOREXPERIMENT=1
 
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
+
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
