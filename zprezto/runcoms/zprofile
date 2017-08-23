@@ -9,9 +9,11 @@
 # Browser
 #
 
-if [[ "$OSTYPE" == darwin* ]]; then
-  export BROWSER='open'
-fi
+# Conflict with TENTEN APPLICATION
+# 11/14/2016
+#if [[ "$OSTYPE" == darwin* ]]; then
+#  export BROWSER='open'
+#fi
 
 #
 # Editors

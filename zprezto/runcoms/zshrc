@@ -14,6 +14,7 @@ fi
 
 # Allow CTRL-S in terminal Vim
 stty -ixon
+
 #Aliases
 if [ -f ~/.dotfiles/aliases_rakuten ]; then
     . ~/.dotfiles/aliases_rakuten
@@ -35,6 +36,9 @@ PATH=$PATH:~/bin:$GOPATH/bin
 export PATH
 [[ -s "/home/sonny8988/.gvm/scripts/gvm" ]] && source "/home/sonny8988/.gvm/scripts/gvm"
 
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
 #NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -46,4 +50,6 @@ export GO15VENDOREXPERIMENT=1
 # SCM breeze
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
+# Android for React-Native
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
